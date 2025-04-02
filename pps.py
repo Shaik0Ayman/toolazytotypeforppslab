@@ -118,6 +118,94 @@ def question13():
     b = np.array([[2, 3], [4, 5], [6, 7], [8, 9]])
     print("Product of Two matrices", np.dot(arr, b)) 
 
+# 5. Calculate the sum of two numbers entered by the user.
+def sum_two_numbers():
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+    total = a + b
+    print("The sum is:", total)
+
+# 6. Find the largest among three numbers entered by the user.
+def largest_of_three():
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+    c = float(input("Enter third number: "))
+    largest = max(a, b, c)
+    print("The largest number is:", largest)
+
+# 7. Print all even numbers from 1 to 20.
+def print_evens_1_to_20():
+    print("Even numbers from 1 to 20:")
+    for num in range(1, 21):
+        if num % 2 == 0:
+            print(num, end=" ")
+    print()  # for a newline
+
+# 8. Calculate the sum of all numbers from 1 to a given number.
+def sum_numbers_to_n():
+    n = int(input("Enter a number: "))
+    total = sum(range(1, n + 1))
+    print("The sum of numbers from 1 to", n, "is:", total)
+
+# 9. Check if a given string is a palindrome.
+def check_palindrome():
+    s = input("Enter a string: ")
+    # Normalize the string: remove spaces and convert to lowercase.
+    s_clean = s.replace(" ", "").lower()
+    if s_clean == s_clean[::-1]:
+        print("The string is a palindrome.")
+    else:
+        print("The string is not a palindrome.")
+
+# 10. Count the number of vowels in a given string.
+def count_vowels():
+    s = input("Enter a string: ")
+    vowels = "aeiouAEIOU"
+    count = sum(1 for char in s if char in vowels)
+    print("The number of vowels in the string is:", count)
+
+# 11. Find the square root of a number.
+import math
+def find_sqrt():
+    num = float(input("Enter a number: "))
+    if num < 0:
+        print("Square root of a negative number is not defined in real numbers.")
+    else:
+        sqrt_val = math.sqrt(num)
+        print("The square root of", num, "is:", sqrt_val)
+
+# 12. Calculate the area of a triangle.
+def area_of_triangle():
+    base = float(input("Enter the base of the triangle: "))
+    height = float(input("Enter the height of the triangle: "))
+    area = 0.5 * base * height
+    print("The area of the triangle is:", area)
+
+# 13. Convert Fahrenheit to Celsius.
+def fahrenheit_to_celsius():
+    fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+    celsius = (fahrenheit - 32) * 5 / 9
+    print(f"{fahrenheit} Fahrenheit is {celsius:.2f} Celsius")
+
+# 14. Check if a number is positive, negative, or zero.
+def check_sign():
+    num = float(input("Enter a number: "))
+    if num > 0:
+        print("The number is positive.")
+    elif num < 0:
+        print("The number is negative.")
+    else:
+        print("The number is zero.")
+
+# 15. Determine if a number is odd or even.
+def odd_or_even():
+    num = int(input("Enter an integer: "))
+    if num % 2 == 0:
+        print("The number is even.")
+    else:
+        print("The number is odd.")
+
+# Example usage:
 
 question1()
 question2()
@@ -132,3 +220,14 @@ question10()
 question11()
 question12()
 question13()
+sum_two_numbers()
+largest_of_three()
+print_evens_1_to_20()
+sum_numbers_to_n()
+check_palindrome()
+count_vowels()
+find_sqrt()
+area_of_triangle()
+fahrenheit_to_celsius()
+check_sign()
+odd_or_even()
